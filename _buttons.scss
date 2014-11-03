@@ -142,7 +142,7 @@ input[type="submit"].btn-white {
 .btn-group {
 	display: inline-block;
 	margin-right: 2px;
-	.clearfix;
+	@include clearfix;
 	vertical-align: bottom;
 }
 .btn-single > .btn,

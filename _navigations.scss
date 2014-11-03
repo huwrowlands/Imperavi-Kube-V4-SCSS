@@ -5,7 +5,7 @@
 .navbar {
 	font-size: 105%;
 	margin-bottom: $base-line;
-	.clearfix;
+	@include clearfix;
 
 	&.navbar-left {
 		float: left;
@@ -16,7 +16,7 @@
 	& ul {
 		list-style: none;
 		margin: 0;
-		.clearfix;
+		@include clearfix;
 	}
 	& li {
 		float: left;
@@ -219,7 +219,7 @@
 .nav-tabs {
 	border-bottom: 1px solid #e3e3e3;
 	margin-bottom: $base-line;
-	.clearfix;
+	@include clearfix;
 
 	& ul {
 		list-style: none;
@@ -264,14 +264,14 @@
 -----------------------------------------------------------------------------*/
 .breadcrumbs {
 	margin-bottom: $base-line;
-	.clearfix;
+	@include clearfix;
 
 	& ul {
 		font-size: .9em;
 		color: rgba(0, 0, 0, .4);
 		list-style: none;
 		margin: 0;
-		.clearfix;
+		@include clearfix;
 	}
 	& li {
 		float: left;
@@ -316,7 +316,7 @@
 	left: -9px;
 	margin-left: 0;
 	list-style: none;
-	.clearfix;
+	@include clearfix;;
 
 	& li {
 		float: left;

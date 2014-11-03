@@ -11,8 +11,8 @@
 		display: block;
 		width: 100%;
 		height: 100%;
-		background-color: @color-blue-dark;
-		@include striped();
+		background-color: $color-blue-dark;
+		//@include striped();
 		@include animation(progress-bar-stripes 2s linear infinite);
 		background-size: 40px 40px;
 	}

@@ -2,7 +2,7 @@
 -----------------------------------------------------------------------------*/
 
 /* Portrait tablet to landscape and desktop */
-$media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 979px) {
 	h1 {
 		font-size: $font-size-h1-md;
 		line-height: 1.125;
@@ -28,7 +28,7 @@ $media (min-width: 768px) and (max-width: 979px) {
 }
 
 /* Landscape phone to portrait tablet */
-$media (max-width: 767px) {
+@media (max-width: 767px) {
 	h1 {
 		font-size: $font-size-h1-sm;
 		line-height: 1.25;

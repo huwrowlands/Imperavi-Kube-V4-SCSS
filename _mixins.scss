@@ -7,7 +7,7 @@
 
 }
 @mixin opacity($opacity: 100) {
-	filter: e(%("alpha(opacity=%d)", $opacity));
+	filter: alpha(opacity=$opacity);
 	-moz-opacity: $opacity / 100;
 	opacity: $opacity / 100;
 }
@@ -37,7 +37,7 @@
 	background-image: -webkit-linear-gradient(top, $start, $end); // Safari 5.1+, Chrome 10+
 	background-image: -o-linear-gradient(top, $start, $end); // Opera 11.10
 	background-image: linear-gradient(top, $start, $end); // The standard
-	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",$start,$end)); // IE9 and down
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end', GradientType=0); // IE9 and down
 }
 @mixin border-top-radius($radius) {
 	border-top-right-radius: $radius;
@@ -61,7 +61,7 @@
 	border-bottom: 1px solid $bottom-color;
 	border-left: 1px solid $left-color;
 }
-@mixin retina-image($path, $w: auto, $h: auto) {
+/*@mixin retina-image($path, $w: auto, $h: auto) {
   background-image: url($path);
   $at2x_path: ~`${path}.replace(/\.\w+$/, function(match) { return "$2x" + match; })`;
 
@@ -75,7 +75,7 @@
     background-image: url($at2x_path);
     background-size: $w $h;
   }
-}
+}*/
 @mixin transition($transition: all linear .2s) {
 	-moz-transition: $transition;
 	transition: $transition;
@@ -156,19 +156,19 @@
 	cursor: pointer;
 	color: rgba($r, $g, $b, 1);
 	text-decoration: none;
-	.opacity(50);
+	@include opacity(50);
 	&:before {
 		content: '\00D7';
 	}
 	&:hover {
-		.opacity(100);
+		@include opacity(100);
 	}
 }
-@mixin striped($color: rgba(255, 255, 255, .2); $angle: 45deg) {
+/*@mixin striped($color: rgba(255, 255, 255, .2); $angle: 45deg) {
 	background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
 	background-image: -o-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
 	background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
-}
+}*/
 @mixin animation($animation) {
 	-webkit-animation: $animation;
 	-o-animation: $animation;
